@@ -1,4 +1,4 @@
-const API_BASE = "https://15.164.93.1:5000";
+const API_BASE = "http://15.164.93.1:5000";
 
 document.addEventListener("DOMContentLoaded", () => {
     // ------------------------------------------------------------------------
