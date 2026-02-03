@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>금천01 버스 지도</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="anonymous"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div id="app-root">
+    <div id="map"></div>
+
+    <!-- 오른쪽 사이드바 -->
+    <aside id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-clock-wrap">
+                <div class="sidebar-clock-label">현재 시각</div>
+                <div id="sidebar-clock" class="sidebar-clock-value"></div>
+            </div>
+            <div class="sidebar-header-actions">
+                <button id="locate-btn" class="sidebar-action-btn" type="button">
+                    내 위치
+                </button>
+                <button id="refresh-btn" class="sidebar-action-btn primary" type="button">
+                    새로고침
+                </button>
+                <button id="sidebar-toggle" class="sidebar-toggle-btn" type="button">
+                    접기
+                </button>
+            </div>
+        </div>
+
+        <div class="sidebar-subheader">
+            <div class="sidebar-title">정류장 및 버스 위치</div>
+            <div id="last-updated" class="sidebar-updated"></div>
+        </div>
+
+        <div id="sidebar-stops" class="sidebar-stops">
+            <!-- 정류장/버스 정보가 JS로 채워짐 -->
+        </div>
+    </aside>
+
+    <!-- Status Message -->
+    <div id="status-msg" class="status-toast hidden"></div>
+</div>
+
+<!-- Leaflet JS -->
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="anonymous"
+></script>
+
+<!-- Custom JS -->
+<script src="/static/js/map.js"></script>
+</body>
+</html>
